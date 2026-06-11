@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --font-display: var(--font-display), Georgia, serif;
+  
+  --color-brand-yellow: #FFEE00;
+  --color-brand-yellow-dark: #CCA300;
+  --color-brand-yellow-glow: rgba(255, 238, 0, 0.3);
+  --color-dark-bg: #050506;
+  --color-dark-surface: #0F0E12;
+  --color-dark-card: #18171D;
+  --color-luxury-gold: #D4AF37;
+}
+
+/* Custom Scrollbar styled for premium dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050506;
+}
+
+::-webkit-scrollbar-gray {
+  background: #111115;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #25232B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFEE00;
+}
+
+/* Text outline utilities for high-fashion, brutalist fitness text display */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.15);
+}
+
+.text-outline-yellow {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #FFEE00;
+}
+
+.text-outline-heavy {
+  color: transparent;
+  -webkit-text-stroke: 2px #FFEE00;
+}
+
+/* Glassmorphic panels with gold/yellow hints */
+.glass-panel {
+  background: rgba(15, 14, 18, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 238, 0, 0.08);
+}
+
+.glass-panel-heavy {
+  background: rgba(10, 10, 12, 0.85);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Luxury card glows */
+.glow-yellow-hover:hover {
+  box-shadow: 0 0 35px rgba(255, 238, 0, 0.18);
+  border-color: rgba(255, 238, 0, 0.6);
+}
+
+/* Custom input style */
+.input-premium {
+  background: rgba(20, 19, 24, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.input-premium:focus {
+  border-color: #FFEE00;
+  box-shadow: 0 0 10px rgba(255, 238, 0, 0.15);
+  outline: none;
+}
+
+/* Custom slider/track styling for transformation slider */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 44px;
+  height: 44px;
+  background: #FFEE00;
+  border: 4px solid #050506;
+  border-radius: 50%;
+  cursor: ew-resize;
+  box-shadow: 0 0 20px rgba(255, 238, 0, 0.8);
+  transition: transform 0.1s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+/* Marquee scrolling animation */
+@keyframes scrollMarquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: scrollMarquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Gold sparkle animation */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; filter: drop-shadow(0 0 2px #FFEE00); }
+  50% { opacity: 1; filter: drop-shadow(0 0 12px #FFEE00); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s infinite ease-in-out;
+}

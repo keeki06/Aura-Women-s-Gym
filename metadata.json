@@ -1,0 +1,6 @@
+{
+  "name": "ZENOVA Women's Gym",
+  "description": "A premium, dark-themed luxury fitness experience and strength sanctuary designed exclusively for women's lifestyle and ultimate physique transformations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
